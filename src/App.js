@@ -22,8 +22,6 @@ function App() {
 
   const [nextFiveDaysData, setNextFiveDaysData] = useState([])
 
-  const [mode, setMode] = useState("metric");
-
   const weatherAPIKey = "9f3cd907b26f3460491046e997bb626b";
   const cityAPICall = `http://api.openweathermap.org/geo/1.0/direct`
   const weatherAPICall = `https://api.openweathermap.org/data/2.5/weather`
@@ -38,11 +36,11 @@ function App() {
     let day = currentTime.getDate() + i;
     let year = currentTime.getFullYear()
 
-    if (day.toString().length == 1) {
+    if (day.toString().length === 1) {
       day = "0" + day
     }
 
-    if (month.toString().length == 1) {
+    if (month.toString().length === 1) {
       month = "0" + month
     }
 
@@ -146,7 +144,7 @@ function App() {
         <Row>
           <Col>
             <h4>
-              Your entered {city} current whether is given on the below table
+              Your entered {city} current weather is given on the below table
             </h4>
             <hr>
             </hr>
